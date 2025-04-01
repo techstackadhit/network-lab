@@ -29,7 +29,7 @@ The simulation is built using **Cisco Packet Tracer**.
 
 ## 🌐 Network Topology
 
-![Network Topology](./screenshots/topologi.png)
+![Network Topology](./topologi.png)
 
 ---
 
