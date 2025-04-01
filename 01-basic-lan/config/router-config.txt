@@ -1,0 +1,29 @@
+enable
+configure terminal
+
+! Internet - Interface G0/0
+interface gigabitEthernet0/2
+ ip address 8.8.8.1 255.255.255.0
+ ip nat outside
+ no shutdown
+
+! Admin LAN - Interface G0/1
+interface gigabitEthernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ ip nat inside
+ no shutdown
+
+! Produksi LAN - Interface G0/2
+interface gigabitEthernet0/1
+ ip address 192.168.20.1 255.255.255.0
+ ip nat inside
+ no shutdown
+
+
+! NAT Configuration
+access-list 1 permit 192.168.10.0 0.0.0.255
+access-list 1 permit 192.168.20.0 0.0.0.255
+ip nat inside source list 1 interface gigabitEthernet0/0 overload
+
+end
+write memory

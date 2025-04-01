@@ -1,0 +1,19 @@
+enable
+configure terminal
+
+hostname Switch-Admin
+
+! Connection to PC1-PC3
+interface range fastEthernet0/2 - 4
+ switchport mode access
+ switchport access vlan 1
+ no shutdown
+
+! Connection to router
+interface fastEthernet0/1
+ switchport mode access
+ switchport access vlan 1
+ no shutdown
+
+end
+write memory

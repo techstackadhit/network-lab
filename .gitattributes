@@ -1,0 +1,12 @@
+# Treat .txt and .md as text for diff
+*.md text
+*.txt text
+*.pkt binary
+*.png binary
+
+# Normalize line endings
+* text=auto
+
+# Linguist overrides (optional, for GitHub repo language stats)
+*.pkt linguist-language=Binary
+*.txt linguist-language=INI
