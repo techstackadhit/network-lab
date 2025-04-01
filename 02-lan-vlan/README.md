@@ -76,7 +76,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ### Core Switch (2960)
 
-- Fa0/1 is the trunk port to the router
+- Fa0/7 is the trunk port to the router
 - VLANs configured:
   - VLAN 10: HR (PC1, PC2)
   - VLAN 20: IT (PC3, PC4)
@@ -97,7 +97,7 @@ All device configurations are available in the [`config/`](./config) folder.
 | Device | File                         |
 |--------|------------------------------|
 | Router | `config/router-config.txt`   |
-| Switch | `config/switch-core.txt`     |
+| Switch | `config/switch-config.txt`     |
 | PCs    | Manual IP setup (see [VLAN & IP Addressing Plan](#-vlan--ip-addressing-plan)) |
 
 Each configuration includes:
