@@ -11,10 +11,10 @@ It follows a progressive structure — from basic LAN setups to advanced configu
 | No | Folder                 | Description                                           |
 |----|------------------------|-------------------------------------------------------|
 | 01 | `01-basic-lan/`        | Basic LAN with two departments & internet access      |
-|    | `02-lan-vlan/`         | VLAN segmentation for Admin & Production              |
-|    | `03-lan-dhcp/`         | DHCP server for automatic IP addressing               |
-|    | `04-lan-firewall-acl/` | Basic firewall using ACL to restrict access           |
-|    | `05-lan-monitoring/`   | Basic SNMP-based monitoring setup (coming soon)       |
+| 02 | `02-lan-vlan/`         | VLAN segmentation for Admin & Production              |
+| 03 | `03-lan-dhcp/`         | DHCP server for automatic IP addressing               |
+| 04 | `04-lan-firewall-acl/` | Basic firewall using ACL to restrict access           |
+| 05 | `05-lan-monitoring/`   | Basic SNMP-based monitoring setup (coming soon)       |
 
 Each sub-project includes:
 - Network topology image
