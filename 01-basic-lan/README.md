@@ -124,8 +124,6 @@ Each configuration includes:
 
 All testing steps are documented with screenshots in the [`screenshots/`](./screenshots) folder.
 
-Example:
-
 - `ping_pc1_pc2.png` → Ping between Admin PCs
 - `ping_pc4_pc5.png` → Ping between Production PCs
 - `ping_pc1_pc4.png` → Ping cross-network
