@@ -29,14 +29,9 @@ The simulation is built using **Cisco Packet Tracer**.
 
 ## 🌐 Network Topology
 
-         [ Internet ]
-              |
-          [Router]
-         /        \
- [Switch-Admin]   [Switch-Production]
-   /   |   \         /   |   \
- PC1  PC2  PC3     PC4  PC5  PC6
+![Network Topology](./screenshots/topologi.png)
 
+---
 
 - **Admin Network**: `192.168.10.0/24`
 - **Production Network**: `192.168.20.0/24`
