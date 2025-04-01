@@ -168,8 +168,3 @@ Open with Cisco Packet Tracer 8.x or later.
   - SNMP-based Monitoring
 
 ---
-
-## 📚 References
-
-- [Cisco VLAN Configuration Guide](https://www.cisco.com/c/en/us/support/docs/lan-switching/vlan/10023-3.html)
-- [Router-on-a-Stick Explained](https://www.networkstraining.com/router-on-a-stick-configuration/)

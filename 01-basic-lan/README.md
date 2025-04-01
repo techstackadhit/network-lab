@@ -165,9 +165,3 @@ Open with Cisco Packet Tracer 8.x or later.
   - Network Monitoring (SNMP/Nagios)
 
 ---
-
-## 📚 References
-
-- [Cisco Packet Tracer - NetAcad](https://www.netacad.com/)
-- [Cisco NAT Configuration Guide](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13772-12.html)
-
