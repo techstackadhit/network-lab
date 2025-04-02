@@ -1,0 +1,37 @@
+enable
+configure terminal
+
+hostname Switch-Core
+
+! Create VLANs
+vlan 10
+ name HR
+vlan 20
+ name IT
+vlan 30
+ name Guests
+
+! Assign ports to VLANs
+interface range fastEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+ no shutdown
+
+interface range fastEthernet0/3 - 4
+ switchport mode access
+ switchport access vlan 20
+ no shutdown
+
+interface range fastEthernet0/5 - 6
+ switchport mode access
+ switchport access vlan 30
+ no shutdown
+
+! Configure trunk to router
+interface fastEthernet0/7
+ description Trunk to Router G0/0
+ switchport mode trunk
+ no shutdown
+
+end
+write memory

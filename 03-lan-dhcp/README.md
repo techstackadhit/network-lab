@@ -154,7 +154,7 @@ You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 - This project is part of a modular series:
   - [`01-basic-lan/`](/01-basic-lan/)
   - [`02-lan-vlan/`](/02-lan-vlan/)
-  - [`03-lan-dhcp/`](/03-lan-dhcp/)
+  - [`03-lan-dhcp/`]✅ (this one!)
   - `04-lan-firewall-acl/` (up next!)
 - Can be extended with DNS, centralized DHCP, or ACL restrictions.
 
