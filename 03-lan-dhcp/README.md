@@ -139,7 +139,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
-- [`packet-tracer/vlan-dhcp-final.pkt`](./packet-tracer/vlan-dhcp-final.pkt)
+- [`packet-tracer/vlan-dhcp-final.pkt`](./packet-tracer/)
 
 **Contents:**
 - VLAN segmentation
