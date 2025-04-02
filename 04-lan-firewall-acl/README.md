@@ -90,34 +90,6 @@ All VLANs get IP via DHCP, and Router-on-a-Stick still provides inter-VLAN routi
 
 ---
 
-## 📎 Notes
-
-- ACL is applied inbound on VLAN 30 interface
-- Can be extended with:
-  - ACL logging
-  - Time-based ACLs
-  - Outbound control or NAT access filtering
-
----
-
-## 📌 ACL Inbound vs Outbound – Behavior Explanation
-
-When applying ACLs on router interfaces, the **direction of application (`in` or `out`) affects the type of response when traffic is denied**:
-
-| Direction | What happens when ACL denies traffic        | Result seen by user         |
-|-----------|----------------------------------------------|------------------------------|
-| `in`      | Traffic is blocked **as it enters** the router | ❗ Destination Host Unreachable |
-| `out`     | Traffic is blocked **before it exits** the router | ⛔ Request Timed Out (RTO)      |
-
-### ✅ Why This Happens:
-- When using `ip access-group BLOCK_GUEST in` on a subinterface (e.g., G0/0.30), **ICMP Echo Requests from Guest get denied before even entering the router**, and the router **generates an ICMP "Destination Unreachable"** message in response.
-- If the ACL is placed outbound (e.g., on G0/0.10 going out to HR), the packet is accepted initially, but dropped before exiting — so **no response is generated**, leading to a classic **RTO (Request Timed Out)**.
-
-### 💡 Best Practice:
-Inbound ACLs are **preferred** for controlling who gets in from specific subnets (e.g., restricting Guest VLAN), and also make it easier to **trace deny messages** during testing.
-
----
-
 ## 🔧 Configuration Files
 
 All device configurations are available in the [`config/`](./config) folder.
@@ -201,5 +173,23 @@ You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
   - ACL logging
   - Time-based ACL
   - NAT or internet restriction policies
+- ACL is applied inbound on VLAN 30 interface
+---
+
+## 📌 ACL Inbound vs Outbound – Behavior Explanation
+
+When applying ACLs on router interfaces, the **direction of application (`in` or `out`) affects the type of response when traffic is denied**:
+
+| Direction | What happens when ACL denies traffic        | Result seen by user         |
+|-----------|----------------------------------------------|------------------------------|
+| `in`      | Traffic is blocked **as it enters** the router | ❗ Destination Host Unreachable |
+| `out`     | Traffic is blocked **before it exits** the router | ⛔ Request Timed Out (RTO)      |
+
+### ✅ Why This Happens:
+- When using `ip access-group BLOCK_GUEST in` on a subinterface (e.g., G0/0.30), **ICMP Echo Requests from Guest get denied before even entering the router**, and the router **generates an ICMP "Destination Unreachable"** message in response.
+- If the ACL is placed outbound (e.g., on G0/0.10 going out to HR), the packet is accepted initially, but dropped before exiting — so **no response is generated**, leading to a classic **RTO (Request Timed Out)**.
+
+### 💡 Best Practice:
+Inbound ACLs are **preferred** for controlling who gets in from specific subnets (e.g., restricting Guest VLAN), and also make it easier to **trace deny messages** during testing.
 
 ---

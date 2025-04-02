@@ -160,7 +160,11 @@ Open with Cisco Packet Tracer 8.x or later.
 ---
 
 ## 📎 Notes
-
+- This project is part of a modular series:
+  - [`01-basic-lan/`](/01-basic-lan/)
+  - `02-lan-vlan/`✅ (this one!)
+  - [`03-lan-dhcp/`](/03-lan-dhcp/)
+  - [`04-lan-firewall-acl/`](/04-lan-firewall-acl/)
 - VLAN 30 (Guest) can optionally be restricted in future ACL project.
 - This project leads into:
   - DHCP per VLAN
