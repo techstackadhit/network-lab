@@ -96,9 +96,9 @@ All device configurations are available in the [`config/`](./config) folder.
 
 | Device   | File                          |
 |----------|-------------------------------|
-| Router   | `config/router-config.txt`(./config/router-config.txt)    |
-| Switch 1 | `config/switch-admin.txt`(./config/switch-admin.txt)     |
-| Switch 2 | `config/switch-production.txt`(./config/switch-production.txt)|
+| Router   | [`config/router-config.txt`](./config/router-config.txt)    |
+| Switch 1 | [`config/switch-admin.txt`](./config/switch-admin.txt)     |
+| Switch 2 | [`config/switch-production.txt`](./config/switch-production.txt)|
 | PCs      | Manual IP setup (see [IP Plan](#-ip-address-plan)) |
 
 Each configuration includes:
@@ -124,10 +124,10 @@ Each configuration includes:
 
 All testing steps are documented with screenshots in the [`screenshots/`](./screenshots) folder.
 
-- `ping_pc1_pc2.png`(./screenshots/ping_pc1_pc2.png) → Ping between Admin PCs
-- `ping_pc4_pc5.png`(./screenshots/ping_pc4_pc5.png) → Ping between Production PCs
-- `ping_pc1_pc4.png`(./screenshots/ping_pc1_pc4.png) → Ping cross-network
-- `ping_pc1_google.png`(./screenshots/ping_pc1_google.png) → Internet access via NAT
+- [`ping_pc1_pc2.png`](./screenshots/ping_pc1_pc2.png) → Ping between Admin PCs
+- [`ping_pc4_pc5.png`](./screenshots/ping_pc4_pc5.png) → Ping between Production PCs
+- [`ping_pc1_pc4.png`](./screenshots/ping_pc1_pc4.png) → Ping cross-network
+- [`ping_pc1_google.png`](./screenshots/ping_pc1_google.png) → Internet access via NAT
 
 ---
 
