@@ -145,7 +145,7 @@ All testing steps are documented with screenshots in the [`screenshots/`](./scre
 
 You can download and open the full simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
-- [`packet-tracer/basic-lan-final-config.pkz`](./packet-tracer/basic-lan-final-config.pkt)
+- [`packet-tracer/basic-lan-final-config.pkt`](./packet-tracer)
 
 **Contents:**
 - Fully configured router, switches, and PCs
