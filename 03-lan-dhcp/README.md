@@ -83,8 +83,8 @@ All device configurations are available in the [`config/`](./config) folder.
 
 | Device | File                         |
 |--------|------------------------------|
-| Router | `config/router-config.txt`   |
-| Switch | `config/switch-config.txt`   |
+| Router | [`config/router-config.txt`](./config/router-config.txt)   |
+| Switch | [`config/switch-config.txt`](./config/switch-config.txt)   |
 | PCs    | DHCP auto (no manual config) |
 
 Each configuration includes:
@@ -113,14 +113,14 @@ Each configuration includes:
 
 Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
-- `dhcp-success-hr.png` → IP auto-assigned to PC1 (HR)
-- `dhcp-success-it.png` → IP auto-assigned to PC3 (IT)
-- `dhcp-success-guest.png` → IP auto-assigned to PC5 (Guest)
-- `ping-hr-to-it.png` → Inter-VLAN test: PC1 to PC3
-- `ping-it-to-guest.png` → Inter-VLAN test: PC3 to PC5
-- `router-dhcp-pools.png` → Router DHCP pool configuration
-- `router-dhcp-binding.png` → Router DHCP binding view
-- `vlan-table.png` → VLAN ID to Port Mapping table from switch
+- [`dhcp-success-hr.png`](./screenshots/dhcp-success-hr.png) → IP auto-assigned to PC1 (HR)
+- [`dhcp-success-it.png`](./screenshots/dhcp-success-it.png) → IP auto-assigned to PC3 (IT)
+- [`dhcp-success-guest.png`](./screenshots/dhcp-success-guest.png) → IP auto-assigned to PC5 (Guest)
+- [`ping-hr-to-it.png`](./screenshots/ping-hr-to-it.png) → Inter-VLAN test: PC1 to PC3
+- [`ping-it-to-guest.png`](./screenshots/ping-it-to-guest.png) → Inter-VLAN test: PC3 to PC5
+- [`router-dhcp-pools.png`](./screenshots/router-dhcp-pools.png) → Router DHCP pool configuration
+- [`router-dhcp-binding.png`](./screenshots/router-dhcp-binding.png) → Router DHCP binding view
+- [`vlan-table.png`](./screenshots/vlan-table.png) → VLAN ID to Port Mapping table from switch
 
 ---
 
@@ -152,9 +152,9 @@ You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 ## 📎 Notes
 
 - This project is part of a modular series:
-  - `01-basic-lan/`
-  - `02-lan-vlan/`
-  - `03-lan-dhcp/`
+  - [`01-basic-lan/`](/01-basic-lan/)
+  - [`02-lan-vlan/`](/02-lan-vlan/)
+  - [`03-lan-dhcp/`](/03-lan-dhcp/)
   - `04-lan-firewall-acl/` (up next!)
 - Can be extended with DNS, centralized DHCP, or ACL restrictions.
 

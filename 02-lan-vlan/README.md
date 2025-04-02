@@ -96,8 +96,8 @@ All device configurations are available in the [`config/`](./config) folder.
 
 | Device | File                         |
 |--------|------------------------------|
-| Router | `config/router-config.txt`   |
-| Switch | `config/switch-config.txt`     |
+| Router | [`config/router-config.txt`](./config/router-config.txt)   |
+| Switch | [`config/switch-config.txt`](./config/switch-config.txt)     |
 | PCs    | Manual IP setup (see [VLAN & IP Addressing Plan](#-vlan--ip-addressing-plan)) |
 
 Each configuration includes:
@@ -124,12 +124,12 @@ Each configuration includes:
 
 All test results are documented with screenshots in the [`screenshots/`](./screenshots) folder:
 
-- `ping_hr_local.png` → Intra-VLAN test: PC1 to PC2 (HR)
-- `ping_it_local.png` → Intra-VLAN test: PC3 to PC4 (IT)
-- `ping_guest_local.png` → Intra-VLAN test: PC5 to PC6 (Guest)
-- `ping_hr_to_it.png` → Inter-VLAN test: PC1 (HR) to PC3 (IT)
-- `ping_hr_to_guest.png` → Inter-VLAN test: PC1 (HR) to PC5 (Guest, optional)
-- `vlan_table.png` → VLAN ID to Port Mapping table from switch
+- [`ping_hr_local.png`](./screenshots/ping_hr_local.png) → Intra-VLAN test: PC1 to PC2 (HR)
+- [`ping_it_local.png`](./screenshots/ping_it_local.png) → Intra-VLAN test: PC3 to PC4 (IT)
+- [`ping_guest_local.png`](./screenshots/ping_guest_local.png) → Intra-VLAN test: PC5 to PC6 (Guest)
+- [`ping_hr_to_it.png`](./screenshots/ping_hr_to_it.png) → Inter-VLAN test: PC1 (HR) to PC3 (IT)
+- [`ping_hr_to_guest.png`](./screenshots/ping_hr_to_guest.png) → Inter-VLAN test: PC1 (HR) to PC5 (Guest, optional)
+- [`vlan_table.png`](./screenshots/vlan_table.png) → VLAN ID to Port Mapping table from switch
 
 ---
 
@@ -148,7 +148,7 @@ All test results are documented with screenshots in the [`screenshots/`](./scree
 
 You can download and open the full simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
-- [`packet-tracer/vlan-intervlan-final.pkt`](./packet-tracer/vlan-intervlan-final.pkt)
+- [`packet-tracer/vlan-intervlan-final.pkt`](./packet-tracer)
 
 **Contents:**
 - VLAN setup with inter-VLAN routing
