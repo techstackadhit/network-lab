@@ -14,7 +14,7 @@ It follows a progressive structure — from basic LAN setups to advanced configu
 | 02 | [`02-lan-vlan/`](/02-lan-vlan)         | VLAN segmentation for Admin & Production              |
 | 03 | [`03-lan-dhcp/`](/03-lan-dhcp)         | DHCP server for automatic IP addressing               |
 | 04 | [`04-lan-firewall-acl/`](/04-lan-firewall-acl) | Basic firewall using ACL to restrict access           |
-| 05 | [`05-static-routing-multisite/`](/05-static-routing-multisite)   | Basic SNMP-based monitoring setup (coming soon)       |
+| 05 | [`05-static-routing-multisite/`](/05-static-routing-multisite)   | Implement static routing for Multisite       |
 
 Each sub-project includes:
 - Network topology image
