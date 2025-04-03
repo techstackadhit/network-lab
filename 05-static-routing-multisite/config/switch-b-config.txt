@@ -1,0 +1,23 @@
+enable
+configure terminal
+
+hostname Switch-BranchB
+
+! Assign PC ports to VLAN 1 (default)
+interface range fastEthernet0/2 - 3
+ switchport mode access
+ switchport access vlan 1
+ no shutdown
+
+! interface ke router (G0/1)
+interface fastEthernet0/1
+ switchport mode access
+ switchport access vlan 1
+ no shutdown
+
+! Optional: Deactivate all unused port
+interface range fa0/4 - 24
+ shutdown
+
+end
+write memory

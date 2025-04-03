@@ -1,0 +1,33 @@
+enable
+configure terminal
+
+hostname Router-HO
+! Interface for HO LAN
+interface GigabitEthernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+
+! Interface to Router A
+interface Serial0/0/0
+ ip address 10.0.0.1 255.255.255.252
+ clock rate 64000
+ no shutdown
+
+!Interface to Router B
+interface Serial0/0/1
+ ip address 10.0.0.5 255.255.255.252
+ clock rate 64000
+ no shutdown
+
+! DHCP pool for HO LAN
+ip dhcp pool HO
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ ip dhcp excluded-address 192.168.10.1 192.168.10.99
+
+! Static routing to Branch A & Branch B trough WAN link
+ip route 192.168.20.0 255.255.255.0 10.0.0.2
+ip route 192.168.30.0 255.255.255.0 10.0.0.6
+
+end
+write memory

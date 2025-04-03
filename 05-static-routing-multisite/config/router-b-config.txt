@@ -1,0 +1,26 @@
+enable
+configure terminal
+
+hostname Router-B
+! Interface to Branch B LAN
+interface GigabitEthernet0/0
+ ip address 192.168.30.1 255.255.255.0
+ no shutdown
+
+! Interface to Router HP
+interface Serial0/0/0
+ ip address 10.0.0.6 255.255.255.252
+ no shutdown
+
+! DHCP pool for Branch B LAN
+ip dhcp pool BRANCHB
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ ip dhcp excluded-address 192.168.30.1 192.168.30.99
+
+! Static routing to HO and Branch A
+ip route 192.168.10.0 255.255.255.0 10.0.0.5
+ip route 192.168.20.0 255.255.255.0 10.0.0.5
+
+end
+write memory
