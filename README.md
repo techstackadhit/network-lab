@@ -1,4 +1,4 @@
-# 🧪 Network Lab
+#  Network Lab
 
 This repository contains a collection of hands-on network simulations and lab exercises built using **Cisco Packet Tracer**, designed to simulate real-world network scenarios.
 
