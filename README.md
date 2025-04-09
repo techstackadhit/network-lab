@@ -6,7 +6,7 @@ It follows a progressive structure — from basic LAN setups to advanced configu
 
 ---
 
-## 📚 Projects
+## Projects
 
 | No | Folder                 | Description                                           |
 |----|------------------------|-------------------------------------------------------|
@@ -24,7 +24,7 @@ Each sub-project includes:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone the repository:
 ```bash
