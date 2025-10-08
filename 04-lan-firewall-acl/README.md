@@ -1,10 +1,10 @@
-# 🔒 VLAN + ACL – Office Network Access Control
+# VLAN + ACL – Office Network Access Control
 
 This project builds on the VLAN + DHCP setup by introducing **Access Control Lists (ACLs)** to limit inter-VLAN communication. Specifically, we restrict **Guest VLAN (30)** from accessing internal departments like **HR (10)** and **IT (20)**, while still allowing HR and IT to communicate freely.
 
 ---
 
-## 🏢 Scenario Overview
+## Scenario Overview
 
 Same 3 VLANs:
 - **HR** (VLAN 10)
@@ -18,7 +18,7 @@ All VLANs get IP via DHCP, and Router-on-a-Stick still provides inter-VLAN routi
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Create ACLs to restrict access **from Guest VLAN (30)** to others
 - Apply ACLs to router interfaces using `ip access-group`
@@ -27,7 +27,7 @@ All VLANs get IP via DHCP, and Router-on-a-Stick still provides inter-VLAN routi
 
 ---
 
-## 🧰 Tools & Devices Used
+## Tools & Devices Used
 
 - Cisco 2911 Router (with ACL config)
 - Cisco 2960 Switch
@@ -36,26 +36,26 @@ All VLANs get IP via DHCP, and Router-on-a-Stick still provides inter-VLAN routi
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ![Network Topology](./topologi.png)
 
 ---
 
-## 🔐 ACL Policy Plan
+## ACL Policy Plan
 
 | Source VLAN | Destination VLAN | Access   | Rule                 |
 |-------------|------------------|----------|----------------------|
-| Guest (30)  | HR (10)          | ❌ Deny  | Block via ACL        |
-| Guest (30)  | IT (20)          | ❌ Deny  | Block via ACL        |
-| HR (10)     | IT (20)          | ✅ Allow | No restriction       |
-| All VLANs   | Router Gateway   | ✅ Allow | DHCP & ping gateway  |
+| Guest (30)  | HR (10)          | Deny  | Block via ACL        |
+| Guest (30)  | IT (20)          | Deny  | Block via ACL        |
+| HR (10)     | IT (20)          | Allow | No restriction       |
+| All VLANs   | Router Gateway   | Allow | DHCP & ping gateway  |
 
 ---
 
-## 🧠 VLAN & DHCP IP Plan
+## VLAN & DHCP IP Plan
 
-### 🧠 VLAN Plan
+### VLAN Plan
 
 | VLAN | Dept.   | Subnet           | Gateway       | DHCP Range              | PCs          |
 |------|---------|------------------|---------------|--------------------------|--------------|
@@ -65,7 +65,7 @@ All VLANs get IP via DHCP, and Router-on-a-Stick still provides inter-VLAN routi
 
 ---
 
-## 🔧 Configuration Overview
+## Configuration Overview
 
 ### Router (2911)
 
@@ -90,7 +90,7 @@ All VLANs get IP via DHCP, and Router-on-a-Stick still provides inter-VLAN routi
 
 ---
 
-## 🔧 Configuration Files
+## Configuration Files
 
 All device configurations are available in the [`config/`](./config) folder.
 
@@ -108,22 +108,22 @@ Each configuration includes:
 
 ---
 
-## ✅ Testing Checklist
+## Testing Checklist
 
 | Test                                         | Result |
 |----------------------------------------------|--------|
-| PC1 & PC2 get DHCP IP (VLAN 10 - HR)         | ✅     |
-| PC3 & PC4 get DHCP IP (VLAN 20 - IT)         | ✅     |
-| PC5 & PC6 get DHCP IP (VLAN 30 - Guest)      | ✅     |
-| PC1 ↔ PC3 (HR ↔ IT, inter-VLAN routing)      | ✅     |
-| PC5 ↔ PC3 or PC 1 (Guest → HR/IT)            | ❌ Blocked     |
-| PC5 ↔ Gateway (Router IP)                    | ✅     |
-| ACL config applied on router subinterface    | ✅     |
-| Vlan table verification                      | ✅     |
+| PC1 & PC2 get DHCP IP (VLAN 10 - HR)         | SUCCESS   |
+| PC3 & PC4 get DHCP IP (VLAN 20 - IT)         | SUCCESS |
+| PC5 & PC6 get DHCP IP (VLAN 30 - Guest)      | SUCCESS   |
+| PC1 ↔ PC3 (HR ↔ IT, inter-VLAN routing)      | SUCCESS  |
+| PC5 ↔ PC3 or PC 1 (Guest → HR/IT)            | BLOCKED     |
+| PC5 ↔ Gateway (Router IP)                    | SUCCESS   |
+| ACL config applied on router subinterface    | SUCCESS     |
+| Vlan table verification                      | SUCCESS     |
 
 ---
 
-## 📸 Testing Evidence
+## Testing Evidence
 
 Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
@@ -138,7 +138,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue                            | Solution                                       |
 |----------------------------------|------------------------------------------------|
@@ -149,7 +149,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 ---
 
-## 📦 Project Files
+## Project Files
 
 You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
@@ -162,13 +162,13 @@ You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
 ---
 
-## 📎 Notes
+## Notes
 
 - This project is part of a modular series:
   - [`01-basic-lan/`](/01-basic-lan/)
   - [`02-lan-vlan/`](/02-lan-vlan/)
   - [`03-lan-dhcp/`](/03-lan-dhcp/)
-  - `04-lan-firewall-acl/` ✅ (this one!)
+  - `04-lan-firewall-acl/` (this one!)
 - Can be extended with:
   - ACL logging
   - Time-based ACL
@@ -176,20 +176,20 @@ You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 - ACL is applied inbound on VLAN 30 interface
 ---
 
-## 📌 ACL Inbound vs Outbound – Behavior Explanation
+## ACL Inbound vs Outbound – Behavior Explanation
 
 When applying ACLs on router interfaces, the **direction of application (`in` or `out`) affects the type of response when traffic is denied**:
 
 | Direction | What happens when ACL denies traffic        | Result seen by user         |
 |-----------|----------------------------------------------|------------------------------|
-| `in`      | Traffic is blocked **as it enters** the router | ❗ Destination Host Unreachable |
-| `out`     | Traffic is blocked **before it exits** the router | ⛔ Request Timed Out (RTO)      |
+| `in`      | Traffic is blocked **as it enters** the router | Destination Host Unreachable |
+| `out`     | Traffic is blocked **before it exits** the router | Request Timed Out (RTO)      |
 
-### ✅ Why This Happens:
+### Why This Happens:
 - When using `ip access-group BLOCK_GUEST in` on a subinterface (e.g., G0/0.30), **ICMP Echo Requests from Guest get denied before even entering the router**, and the router **generates an ICMP "Destination Unreachable"** message in response.
 - If the ACL is placed outbound (e.g., on G0/0.10 going out to HR), the packet is accepted initially, but dropped before exiting — so **no response is generated**, leading to a classic **RTO (Request Timed Out)**.
 
-### 💡 Best Practice:
+### Best Practice:
 Inbound ACLs are **preferred** for controlling who gets in from specific subnets (e.g., restricting Guest VLAN), and also make it easier to **trace deny messages** during testing.
 
 ---
