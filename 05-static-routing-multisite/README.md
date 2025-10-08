@@ -1,10 +1,10 @@
-# 🌐 Multi-Site LAN with Static Routing
+# Multi-Site LAN with Static Routing
 
 This project simulates a **company with multiple branch offices**, each having its own local network (LAN). The branches are connected through routers, forming a wide area network (WAN). Devices from one branch can communicate with devices in other branches using **static routing** configured on each router.
 
 ---
 
-## 🏢 Scenario Overview
+## Scenario Overview
 
 A mid-sized company has **three locations**:
 - **Head Office (HO)** – Main location with HR & Finance
@@ -17,7 +17,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Design and simulate a multi-branch LAN network.
 - Assign unique subnets to each location.
@@ -27,7 +27,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🧰 Tools & Devices Used
+## Tools & Devices Used
 
 - 3x Cisco 2911 Routers
 - 3x Cisco 2960 Switches
@@ -37,13 +37,13 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ![Network Topology](./topologi.png)
 
 ---
 
-## 🧠 Subnets per Site:
+## Subnets per Site:
 - HO (Head Office): `192.168.10.0/24`
 - Branch A: `192.168.20.0/24`
 - Branch B: `192.168.30.0/24`
@@ -52,7 +52,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🧠 IP Addressing Plan
+## IP Addressing Plan
 
 | Site       | Device        | Interface     | IP Address       | Notes              |
 |------------|---------------|---------------|------------------|---------------------|
@@ -67,16 +67,16 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🔧 Configuration Overview
+## Configuration Overview
 
-### 🛠️ Router Configuration
+### Router Configuration
 
 Each router is responsible for:
 - **Assigning IP addresses via DHCP** to its local LAN
 - **Setting up static routes** to reach other branch networks
 - **Configuring serial interfaces** for WAN links
 
-#### 🔹 Head Office (Router-HO)
+#### Head Office (Router-HO)
 
 - LAN IP: `192.168.10.1/24`
 - DHCP Pool: 192.168.10.100–199
@@ -84,7 +84,7 @@ Each router is responsible for:
   - To Branch A → via `10.0.0.2`
   - To Branch B → via `10.0.0.6`
 
-#### 🔹 Branch A (Router-A)
+#### Branch A (Router-A)
 
 - LAN IP: `192.168.20.1/24`
 - DHCP Pool: 192.168.20.100–199
@@ -100,7 +100,7 @@ Each router is responsible for:
 
 ---
 
-## 📁 Configuration Files
+## Configuration Files
 
 Available in the [`config/`](./config) folder:
 
@@ -122,22 +122,22 @@ Each config includes:
 
 ---
 
-## ✅ Testing Checklist
+## Testing Checklist
 
 | Test                                        | Result |
 |---------------------------------------------|--------|
-| PC1 ↔ PC2 (HO local communication)          | ✅     |
-| PC3 ↔ PC4 (Branch A local communication)    | ✅     |
-| PC5 ↔ PC6 (Branch B local communication)    | ✅     |
-| PC1 ↔ PC3 (HO ↔ Branch A, routed)           | ✅     |
-| PC1 ↔ PC5 (HO ↔ Branch B, routed)           | ✅     |
-| PC3 ↔ PC5 (Branch A ↔ Branch B, routed)     | ✅     |
-| DHCP IP received at all sites               | ✅     |
-| Show IP Route table on all routers          | ✅     |
+| PC1 ↔ PC2 (HO local communication)          | DONE     |
+| PC3 ↔ PC4 (Branch A local communication)    | DONE     |
+| PC5 ↔ PC6 (Branch B local communication)    | DONE     |
+| PC1 ↔ PC3 (HO ↔ Branch A, routed)           | DONE     |
+| PC1 ↔ PC5 (HO ↔ Branch B, routed)           | DONE    |
+| PC3 ↔ PC5 (Branch A ↔ Branch B, routed)     | DONE   |
+| DHCP IP received at all sites               | DONE   |
+| Show IP Route table on all routers          | DONE   |
 
 ---
 
-## 📸 Testing Evidence
+## Testing Evidence
 
 Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
@@ -153,7 +153,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue                                      | Solution                                           |
 |-------------------------------------------|----------------------------------------------------|
@@ -165,7 +165,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 ---
 
-## 📦 Project Files
+## Project Files
 
 This project is available for download and simulation using [Cisco Packet Tracer](https://www.netacad.com/):
 
@@ -179,7 +179,7 @@ This project is available for download and simulation using [Cisco Packet Tracer
 
 ---
 
-## 📎 Notes
+## Notes
 
 - This project simulates a small-scale **WAN interconnection** using static routing.
 - Perfect as a base for:
@@ -187,7 +187,7 @@ This project is available for download and simulation using [Cisco Packet Tracer
   - VPN or tunneling simulation (in more advanced tools)
   - Firewall rules between sites (via ACLs)
 
-📌 Tips:
+Tips:
 - Label interfaces and IPs in your Packet Tracer file for clarity.
 - Use `ping` and `traceroute` from each site to simulate real-world connectivity check.
 - For bonus challenge: disable 1 WAN link and reroute manually.
