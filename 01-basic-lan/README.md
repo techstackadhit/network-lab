@@ -1,6 +1,6 @@
 # network-lab-portofolio
 
-# 🖧 Basic LAN Setup for a Small Office with Internet Access
+# Basic LAN Setup for a Small Office with Internet Access
 
 This project simulates a simple local area network (LAN) setup for a small office with two departments: **Administration** and **Production**. Each department has its own switch and a group of PCs, all connected to a central router that provides internet access using **NAT (Network Address Translation)**.
 
@@ -8,7 +8,7 @@ The simulation is built using **Cisco Packet Tracer**.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Create a segmented LAN for two departments using two switches.
 - Assign static IP addresses to all client devices.
@@ -17,7 +17,7 @@ The simulation is built using **Cisco Packet Tracer**.
 
 ---
 
-## 🧰 Tools & Devices Used
+## Tools & Devices Used
 
 - Cisco 2911 Router
 - 2x Cisco 2960 Switches
@@ -27,7 +27,7 @@ The simulation is built using **Cisco Packet Tracer**.
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ![Network Topology](./topologi.png)
 
@@ -39,11 +39,11 @@ The simulation is built using **Cisco Packet Tracer**.
 
 ---
 
-## 🧠 Internet Simulation in Packet Tracer
+## Internet Simulation in Packet Tracer
 
 Since Cisco Packet Tracer doesn't provide real internet access, this project includes a simulated internet setup using a local server device.
 
-### ✅ How It Works:
+### How It Works:
 
 - A local server is assigned the IP `8.8.8.8` to mimic Google DNS.
 - The router connects directly to this server using the same subnet (`8.8.8.0/24`).
@@ -56,7 +56,7 @@ This allows client PCs to resolve domain names and access a mock internet enviro
 
 ---
 
-## 🧠 IP Address Plan
+## IP Address Plan
 
 | Device | IP Address     | Subnet Mask     | Gateway        |
 |--------|----------------|-----------------|----------------|
@@ -69,7 +69,7 @@ This allows client PCs to resolve domain names and access a mock internet enviro
 
 ---
 
-## 🔧 Configuration Overview
+## Configuration Overview
 
 ### Router (2911)
 
@@ -90,7 +90,7 @@ This allows client PCs to resolve domain names and access a mock internet enviro
 
 ---
 
-## 🔧 Configuration Files
+## Configuration Files
 
 All device configurations are available in the [`config/`](./config) folder.
 
@@ -109,18 +109,18 @@ Each configuration includes:
 
 ---
 
-## ✅ Testing Checklist
+## Testing Checklist
 
 | Test                                  | Result |
 |---------------------------------------|--------|
-| PC1 ↔ PC2 (Admin LAN)                 | ✅     |
-| PC4 ↔ PC5 (Production LAN)            | ✅     |
-| PC1 ↔ PC4 (Cross-network communication)| ✅    |
-| Internet access from PC1 / PC4        | ✅     |
+| PC1 ↔ PC2 (Admin LAN)                 | SUCCESS     |
+| PC4 ↔ PC5 (Production LAN)            | SUCCESS     |
+| PC1 ↔ PC4 (Cross-network communication)| SUCCESS    |
+| Internet access from PC1 / PC4        | SUCCESS     |
 
 ---
 
-## 📸 Testing Evidence
+## Testing Evidence
 
 All testing steps are documented with screenshots in the [`screenshots/`](./screenshots) folder.
 
@@ -131,7 +131,7 @@ All testing steps are documented with screenshots in the [`screenshots/`](./scre
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue                           | Solution                            |
 |----------------------------------|-------------------------------------|
@@ -141,7 +141,7 @@ All testing steps are documented with screenshots in the [`screenshots/`](./scre
 
 ---
 
-## 📦 Project Files
+## Project Files
 
 You can download and open the full simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
@@ -156,7 +156,7 @@ Open with Cisco Packet Tracer 8.x or later.
 
 ---
 
-## 📎 Notes
+## Notes
 
 - This project is the foundation for upcoming versions:
   - VLAN segmentation
