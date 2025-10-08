@@ -1,10 +1,10 @@
-# 📡 VLAN + DHCP – Dynamic IP for Office Network
+# VLAN + DHCP – Dynamic IP for Office Network
 
 This project extends the VLAN-based office setup by implementing **DHCP for each VLAN**, enabling devices to automatically obtain IP addresses. The router acts as a DHCP server and assigns IPs to clients based on their VLAN segment.
 
 ---
 
-## 🏢 Scenario Overview
+## Scenario Overview
 
 The company has three departments:
 - **HR**
@@ -17,7 +17,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Configure DHCP pools on the router for each VLAN.
 - Assign clients to the correct VLAN and verify automatic IP assignment.
@@ -26,7 +26,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🧰 Tools & Devices Used
+## Tools & Devices Used
 
 - Cisco 2911 Router (DHCP server + Inter-VLAN Routing)
 - Cisco 2960 Switch (Core)
@@ -35,15 +35,15 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ![Network Topology](./topologi.png)
 
 ---
 
-## 🧠 VLAN & DHCP IP Plan
+## VLAN & DHCP IP Plan
 
-### 🧠 VLAN Plan
+### VLAN Plan
 
 | VLAN | Dept.   | Subnet           | Gateway       | DHCP Range              | PCs          |
 |------|---------|------------------|---------------|--------------------------|--------------|
@@ -53,7 +53,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🔧 Configuration Overview
+## Configuration Overview
 
 ### Router (2911)
 
@@ -77,7 +77,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🔧 Configuration Files
+## Configuration Files
 
 All device configurations are available in the [`config/`](./config) folder.
 
@@ -94,22 +94,22 @@ Each configuration includes:
 
 ---
 
-## ✅ Testing Checklist
+## Testing Checklist
 
 | Test                                         | Result |
 |----------------------------------------------|--------|
-| PC1 & PC2 get DHCP IP (VLAN 10 - HR)         | ✅     |
-| PC3 & PC4 get DHCP IP (VLAN 20 - IT)         | ✅     |
-| PC5 & PC6 get DHCP IP (VLAN 30 - Guest)      | ✅     |
-| PC1 ↔ PC3 (HR ↔ IT, inter-VLAN routing)      | ✅     |
-| PC3 ↔ PC5 (IT ↔ Guest, inter-VLAN routing)   | ✅     |
-| DHCP pool configuration                      | ✅     |
-| DHCP binding table                           | ✅     |
-| Vlan table                                   | ✅     |
+| PC1 & PC2 get DHCP IP (VLAN 10 - HR)         | SUCCESS|
+| PC3 & PC4 get DHCP IP (VLAN 20 - IT)         | SUCCESS|
+| PC5 & PC6 get DHCP IP (VLAN 30 - Guest)      | SUCCESS|
+| PC1 ↔ PC3 (HR ↔ IT, inter-VLAN routing)      | SUCCESS|
+| PC3 ↔ PC5 (IT ↔ Guest, inter-VLAN routing)   | SUCCESS|
+| DHCP pool configuration                      | SUCCESS|
+| DHCP binding table                           | SUCCESS|
+| Vlan table                                   | SUCCESS|
 
 ---
 
-## 📸 Testing Evidence
+## Testing Evidence
 
 Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
@@ -124,7 +124,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue                            | Solution                                       |
 |----------------------------------|------------------------------------------------|
@@ -135,7 +135,7 @@ Screenshots are available in the [`screenshots/`](./screenshots) folder:
 
 ---
 
-## 📦 Project Files
+## Project Files
 
 You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
@@ -149,12 +149,12 @@ You can open the simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
 ---
 
-## 📎 Notes
+## Notes
 
 - This project is part of a modular series:
   - [`01-basic-lan/`](/01-basic-lan/)
   - [`02-lan-vlan/`](/02-lan-vlan/)
-  - `03-lan-dhcp/`✅ (this one!)
+  - `03-lan-dhcp/`(this one!)
   - [`04-lan-firewall-acl/`](/04-lan-firewall-acl/)
 - Can be extended with:
   - DNS
