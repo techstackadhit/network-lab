@@ -1,10 +1,10 @@
-# 🧩 VLAN & Inter-VLAN Routing – Realistic Office Network
+# VLAN & Inter-VLAN Routing – Realistic Office Network
 
 This project simulates a **mid-size office** network that utilizes **VLANs for network segmentation**, and **Inter-VLAN Routing** via **Router-on-a-Stick** to enable communication between departments.
 
 ---
 
-## 🏢 Scenario Overview
+## Scenario Overview
 
 A company has three departments:
 - **Human Resources (HR)**
@@ -17,7 +17,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Create 3 VLANs and assign PCs to each department.
 - Configure static IP addressing per VLAN.
@@ -26,7 +26,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🧰 Tools & Devices Used
+## Tools & Devices Used
 
 - Cisco 2911 Router
 - Cisco 2960 Switch (Core)
@@ -35,15 +35,15 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ![Network Topology](./topologi.png)
 
 ---
 
-## 🧠 VLAN & IP Addressing Plan
+## VLAN & IP Addressing Plan
 
-### 🧠 VLAN Plan
+### VLAN Plan
 
 | VLAN | Dept.   | Subnet           | Gateway       | PCs                  |
 |------|---------|------------------|---------------|-----------------------|
@@ -51,7 +51,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 | 20   | IT      | 192.168.20.0/24  | 192.168.20.1  | PC3, PC4             |
 | 30   | Guest   | 192.168.30.0/24  | 192.168.30.1  | PC5, PC6             |
 
-### 🧠 IP Address Plan
+### IP Address Plan
 
 | Device | IP Address     | Subnet Mask     | Gateway        |
 |--------|----------------|-----------------|----------------|
@@ -64,7 +64,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🔧 Configuration Overview
+## Configuration Overview
 
 ### Router (2911 - Router-on-a-Stick)
 
@@ -90,7 +90,7 @@ This setup is built and tested using **Cisco Packet Tracer**.
 
 ---
 
-## 🔧 Configuration Files
+## Configuration Files
 
 All device configurations are available in the [`config/`](./config) folder.
 
@@ -107,20 +107,20 @@ Each configuration includes:
 
 ---
 
-## ✅ Testing Checklist
+## Testing Checklist
 
 | Test                                     | Result |
 |------------------------------------------|--------|
-| PC1 ↔ PC2 (HR VLAN 10)                   | ✅     |
-| PC3 ↔ PC4 (IT VLAN 20)                   | ✅     |
-| PC5 ↔ PC6 (Guest VLAN 30)                | ✅     |
-| PC1 ↔ PC3 (HR ↔ IT, inter-VLAN routing)  | ✅     |
-| PC1 ↔ PC5 (HR ↔ Guest)                   | ✅     |
-| Vlan table                               | ✅     |
+| PC1 ↔ PC2 (HR VLAN 10)                   | SUCCESS     |
+| PC3 ↔ PC4 (IT VLAN 20)                   | SUCCESS     |
+| PC5 ↔ PC6 (Guest VLAN 30)                | SUCCESS     |
+| PC1 ↔ PC3 (HR ↔ IT, inter-VLAN routing)  | SUCCESS     |
+| PC1 ↔ PC5 (HR ↔ Guest)                   | SUCCESS     |
+| Vlan table                               | SUCCESS     |
 
 ---
 
-## 📸 Testing Evidence
+## Testing Evidence
 
 All test results are documented with screenshots in the [`screenshots/`](./screenshots) folder:
 
@@ -133,7 +133,7 @@ All test results are documented with screenshots in the [`screenshots/`](./scree
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue                                | Solution                                             |
 |--------------------------------------|------------------------------------------------------|
@@ -144,7 +144,7 @@ All test results are documented with screenshots in the [`screenshots/`](./scree
 
 ---
 
-## 📦 Project Files
+## Project Files
 
 You can download and open the full simulation in [Cisco Packet Tracer](https://www.netacad.com/):
 
@@ -159,10 +159,10 @@ Open with Cisco Packet Tracer 8.x or later.
 
 ---
 
-## 📎 Notes
+## Notes
 - This project is part of a modular series:
   - [`01-basic-lan/`](/01-basic-lan/)
-  - `02-lan-vlan/`✅ (this one!)
+  - `02-lan-vlan/`(this one!)
   - [`03-lan-dhcp/`](/03-lan-dhcp/)
   - [`04-lan-firewall-acl/`](/04-lan-firewall-acl/)
 - VLAN 30 (Guest) can optionally be restricted in future ACL project.
